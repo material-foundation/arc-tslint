@@ -57,7 +57,7 @@ final class TypescriptLinter extends ArcanistExternalLinter {
   }
 
   public function getVersion() {
-    list($stdout) = execx('%C --version', $this->getDefaultBinary());
+    list($stdout) = execx('%C --version', $this->getExecutableCommand());
 
     $matches = array();
     $regex = '/(?P<version>\d+\.\d+\.\d+)/';
